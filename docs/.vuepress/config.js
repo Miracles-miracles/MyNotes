@@ -30,8 +30,8 @@ export default defineUserConfig({
             link: '/automotive/can-bus.md',
           },
           {
-            text: '培训记录',
-            link: '/training/company-intro.md',
+            text: '杂项',
+            link: '/misc/company-intro.md',
           },
         ],
       },
@@ -73,13 +73,13 @@ export default defineUserConfig({
           ],
         },
       ],
-      '/training/': [
+      '/misc/': [
         {
-          text: '培训记录',
+          text: '杂项',
           collapsible: true,
           children: [
-            '/training/company-intro.md',
-            '/training/onboarding-notes.md',
+            '/misc/company-intro.md',
+            '/misc/onboarding-notes.md',
           ],
         },
       ],
