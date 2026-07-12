@@ -1,6 +1,7 @@
 import { defaultTheme } from '@vuepress/theme-default'
 import { defineUserConfig } from 'vuepress'
 import { viteBundler } from '@vuepress/bundler-vite'
+import { searchPlugin } from '@vuepress/plugin-search'
 
 export default defineUserConfig({
   lang: 'zh-CN',
@@ -8,6 +9,19 @@ export default defineUserConfig({
   base:'/MyNotes/',
   title: 'MyNotes',
   description: 'Notes',
+
+  plugins: [
+    searchPlugin({
+      locales: {
+        '/': {
+          placeholder: '搜索',
+        },
+      },
+      maxSuggestions: 10,
+      isSearchable: (page) => true,
+      hotKeys: ['s'],
+    }),
+  ],
 
   theme: defaultTheme({
     logo: '/images/IMG_20220831_203032.jpg',
